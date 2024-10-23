@@ -1,0 +1,193 @@
+*,
+*:before,
+*:after {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+font-family: 'Poppins', sans-serif;
+}
+/* --- reset --- */
+:root {
+/*--- border-radius --- */
+--bubble-radius: 50%;
+--radius-minimal: 0.2em;
+--radius-light: 1em;
+--radius-medium: 2em;
+--radius-large: 3em;
+--radius-x-large: 5em;
+/* --- color styles ---*/
+--color-dark: rgba();
+--color-dark: rgba();
+--color-one: rgba(47, 49, 48, 1); /* dark blue */
+--color-one-lite: rgba();
+--color-two: rgba(228, 177, 156, 1); /* light blue */
+--color-two-lite: rgba();
+--color-three: rgba(66, 111, 134, 1); /* red pink */
+--color-three-lite: rgba(66, 111, 134, .3); /* red pink */
+--color-four: rgba(249, 185, 49, 1); /* smokey white */
+--color-four-lite: rgba();
+--color-light: rgba(254, 254, 254, 1); /* smokey white */
+--color-light-lite: rgba(245, 245, 249, 1); /* cloudy white */
+/* --- font styles --- */
+--font-semi-minimal: 1rem;
+--font-minimal: 1rem;
+--font-medium: 2rem;
+--font-large: 3rem;
+--font-x-large: 6rem;
+--font-xx-large: 12rem;
+--font-size: 1rem;
+--font-weight-h1: 800;
+--font-weight-p: 300;
+/* --- letter-spacing styles --- */
+--letter-spacing-minimal: 1px;
+--letter-spacing-light: 5px;
+--letter-spacing-medium: 8px;
+--letter-spacing-large: 0.3em;
+--letter-spacing-xl: 0.5em;
+--letter-spacing-xxl: 1em;
+/* --- margin styles ---*/
+--margin-minimal: 1em;
+--margin-light: 1em;
+--margin-medium: 2em;
+--margin-large: 3em;
+--margin-x-large: 5em;
+--margin-xx-large: 5em;
+/* --- padding styles ---*/
+--padding-minimal: 1em;
+--padding-light: 1em;
+--padding-medium: 2em;
+--padding-large: 3em;
+--padding-x-large: 5em;
+/*--- transition styles --- */
+--transition: 0.3s ease-in;
+--transition-light: 0.5s ease-in;
+--transition-medium: 1s ease-in;
+}
+/* --- general styles section ---*/
+html {
+scroll-behavior: smooth;
+}
+img, video {
+display: block;
+object-fit: cover;
+cursor: pointer;
+}
+li {
+list-style: none;
+}
+a {
+text-decoration: none;
+transition: all 0.5s ease-in;
+}
+input, button {
+outline: 0;
+border: 0;
+}
+/*--- HERO SECTION --- */
+/*--- VOTE TEXT SUB-SECTION --- */
+.hero {
+width: 100%;
+min-height: 100vh;
+height: 100vh;
+height: 100svh;
+background: linear-gradient(rgba(0,0,0,0.9) 50%, rgba(0,0,0,0.4)), url('azadi-tower-6974106_1920.jpg');
+background-position: bottom;
+background-repeat: no-repeat;
+background-size: cover;
+display: flex;
+justify-content: center;
+align-items: center;
+position: relative;
+transition: var(--transition-medium) background-position;
+}
+/*--- LOGO --- */
+.logo-wrapper {
+position: absolute;
+top: 7%;
+left: 4%;
+transform: translate(-4%, -8%);
+opacity: 0.7;
+font-weight: 900;
+z-index: 999;
+cursor: pointer;
+transition: var(--transition) opacity;
+}
+.logo {
+color: var(--color-light);
+font-family: /*'evogria',*/ 'rondal', serif;
+letter-spacing: var(--letter-spacing-light);
+}
+.logo-wrapper:hover, .logo-wrapper:focus, .logo-wrapper:focus-within {
+opacity: 0.1;
+}
+.grid-collection {
+width: 100%;
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+}
+.grid-box {
+width: 800px;
+height: 500px;
+border-radius: var(--radius-medium);
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+}
+.box-bg {
+width: 180px;
+height: 180px;
+border-radius: var(--bubble-radius);
+display: grid;
+place-items: center;
+transform: scale(0.6);
+border: 10px solid var(--color-light);
+cursor: pointer;
+transition: var(--transition);
+}
+.box-1 {
+background-color: var(--color-two);
+}
+.box-2 {
+background-color: var(--color-three);
+}
+.box-3 {
+background-color: var(--color-one);
+}
+.box-4 {
+background-color: var(--color-four);
+}
+.cta:hover, .cta:focus, .cta:focus-within {
+background: linear-gradient(var(--color-two) 50%, rgba(0,0,0,0.4));
+}
+.box-bg:hover, .box-bg:focus, .box-bg:focus-within {
+background: linear-gradient(var(--color-two) 50%, rgba(0,0,0,0.4));
+transform: scale(1);
+}
+/*--- CTA --- */
+.cta-wrapper {
+position: absolute;
+top: 8%;
+left: 49%;
+transform: translate(-49%, -8%);
+opacity: 0.7;
+}
+.cta {
+background: var(--color-light);
+padding: var(--padding-light) var(--padding-medium);
+border-radius: var(--radius-light);
+color: var(--color-one);
+font-weight: 900;
+letter-spacing: var(--letter-spacing-minimals);
+transition: var(--transition);
+}
+.desc-wrapper {
+position: absolute;
+color: var(--color-light-lite);
+opacity: 0.7;
+bottom: 65%;
+transform: translate(-65);
+}
